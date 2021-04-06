@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render, screen } from '@testing-library/react';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import Home from './pages/home';
+
+test('renderiza a home', () => {
+
+  
+  render(<Home />);
+  const inputElement = screen.getAllByPlaceholderText('Search')
+  fireEvent.change(inputElement, { target: { value: '' } })
+  fireEvent.click(getbyText('Search!'))
+
+  const alert = await screen.findByRole('alert')
+  expect(alert).toHaveTextContent('Empty query string!')
+
 });

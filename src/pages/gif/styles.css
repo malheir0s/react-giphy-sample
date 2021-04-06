@@ -1,0 +1,13 @@
+.single-gif-container{
+    width: 50%;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.single-gif-container img{
+    max-width: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
